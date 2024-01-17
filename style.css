@@ -1,0 +1,58 @@
+#img_1 {
+    width: 222px;
+    height: auto;
+    }
+    #img_2 {
+    width: 222px;
+    height: auto;
+    margin-right: 50px;
+}
+#img_3 {
+    width: 222px;
+    height: auto;
+}
+.img_1, .img_2, .img_3{
+    width: fit-content;
+}
+.texte_1, .texte_2, .texte_3{
+    max-width: 460px;
+}
+.div_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.1), 0 2px 4px 2px rgba(0, 0, 0, 0.06);
+        border-radius: 5px;
+    padding: 80px;
+    margin: 30px 150px 30px 150px;
+}
+.div_2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:  0 4px 6px 2px rgba(0, 0, 0, 0.1), 0 2px 4px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 5px ;
+    padding: 80px;
+    margin: 30px 150px 30px 150px;
+}
+.div_3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.1), 0 2px 4px 2px rgba(0, 0, 0, 0.06);  
+    border-radius: 5px;
+    padding: 80px;
+    margin: 30px 150px 30px 150px;
+}
+main {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+}
+h2 {
+    font-weight: 700;
+}
+h4 {
+    font-weight: 400;
+    color: #808080;
+}
