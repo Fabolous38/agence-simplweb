@@ -52,7 +52,7 @@ body {
     font-weight: 400;
     max-width: 490px;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 576px){
     .firstBox {
         flex-direction: column-reverse;
         text-align: center;
