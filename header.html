@@ -23,16 +23,24 @@
 
           <div class="form-popup" id="myForm">
             <form action="" class="form-container">
-              <h1>Login</h1>
+              <h1>Inscription</h1>
           
+
+              <label for="Nom"><b>Nom</b></label>
+              <input type="text" placeholder="Renseignez votre nom" name="nom" required>
+
+
+              <label for="prenom"><b>Prénom</b></label>
+              <input type="text" placeholder="Renseignez votre prénom" name="prenom" required>
+
               <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
+              <input type="text" placeholder="Renseignez votre adresse mail" name="email" required>
           
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
+              <label for="psw"><b>Mot de passe</b></label>
+              <input type="password" placeholder="Choissisez un mot de passe" name="psw" required>
           
-              <button type="submit" class="btn">Login</button>
-              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              <button type="submit" class="btn">S'inscrire</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Annuler</button>
             </form>
           </div>
 
