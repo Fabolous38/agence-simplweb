@@ -3,11 +3,17 @@ body {
 }
 
 header {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
   background-color: hsl(193, 100%, 96%);
   background-image: url("images/bg_hero_desktop.svg");
-}
+  background-repeat: no-repeat;
 
+}
+p {
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+/*Logo + bouton "try it free"*/
 .header_haut {
   display: flex;
   justify-content: space-between;
@@ -19,31 +25,56 @@ header {
   height: auto;
   padding: 10px 0 0 0;
 }
-
+/*Style du bouton "Try it free"*/
 .open-button {
-  width: max-content;
-  padding: 11px 50px;
-  border: none;
-  border-radius: 25px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  background-color: white;
-  font-weight: bold;
-  font-family: "Poppins", sans-serif;
-}
-
-.open-button:hover {
-  color: grey;
   cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 25px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 12px 50px 12px 50px;
+  transition: all 0.3s ease-out 100ms
 }
+/*Effet hover du bouton "Try it free*/
+.open-button:hover {
 
-.form-popup {
+    color: hsl(0, 0%, 50%);
+    box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transform: scale(120%);
+}
+/* Formulaire pop-up*/
+ .form-popup {
   display: none;
   position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 /*h2 du popup*/
@@ -52,80 +83,79 @@ h2{
   margin: 0 0 25px 0;
 }
 
-/* Add styles to the form container */
+/* Style du container de formulaire */
 .form-container {
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
 
-/* Full-width input fields */
+/* Champs Input */
 .form-container input[type=text], .form-container input[type=password] {
   width: 90%;
   padding: 15px;
   margin: 5px 0 22px 0;
-  border: none;
+  border-radius: 25px;
   background: #f1f1f1;
 }
 
-/* When the inputs get focus, do something */
+/* Changement couleur input quand on clique dessus (plus foncé) */
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
 
-/* Set a style for the submit/login button */
+/* Style du bouton "S'inscrire" */
 .form-container .btn {
-  background-color: #04AA6D;
+  background-color: hsl(322, 100%, 66%);
   color: white;
   padding: 16px 20px;
   border: none;
+  border-radius : 25px; 
   cursor: pointer;
   width: 100%;
   margin-bottom:10px;
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
+/* Fond gris pour le bouton de fermeture pop-up */
 .form-container .cancel {
-  background-color: red;
+  background-color: rgb(111, 108, 108);
   max-width: 10%;
   padding: 2px;
   margin: 0 0 0 271px;
 }
 
-/* Add some hover effects to buttons */
+/* Effet HOVER sur le bouton */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-
+/*Titre, texte, bouton rose + image*/
 .header_bas {
   display: flex;
   padding: 15px 60px;
 }
-
+/*Titre + texte + bouton rose du header*/
 .bloc {
   max-width: 44%;
   padding: 56px 0 0 0;
 }
-
-.button_2 {
-  width: max-content;
-  padding: 13px 50px;
-  margin-top: 10px;
+/*Style du bouton*/
+.pink-btn {
+  font-weight: 600;
   border: none;
-  border-radius: 25px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  color: white;
+  outline: none;
   background-color: hsl(322, 100%, 66%);
-  font-weight: bold;
-  font-family: "Poppins", sans-serif;
-}
-
-.button_2:hover {
-  background-color: #ff9bdb;
+  color: #ffffff;
+  border-radius: 25px;
   cursor: pointer;
+  padding: 18px 60px 18px 60px;
+  transition: all 0.3s ease-out 100ms
+}
+/*Effet hover bouton*/
+.pink-btn:hover, #sticky-btn:hover {
+  background-color: hsl(322, 100%, 75%);
+  transform: scale(120%);
 }
 
 #image_mockup {
@@ -135,9 +165,7 @@ h2{
 
 @media only screen and (min-width: 737px) and (max-width: 950px) {
   /* TABLETTE */
-  .header_haut {
-    padding: 15px 30px 75px;
-  }
+
 
   .header_bas {
     padding: 0px 30px 65px;
@@ -146,7 +174,6 @@ h2{
   .bloc {
     max-width: 42%;
     padding: 25px 0 0 0;
-    font-size: 13px;
   }
 
   #image_mockup {
@@ -157,9 +184,7 @@ h2{
 
 @media only screen and (min-width: 576px) and (max-width: 736px) {
   /*TABLETTE 2.0*/
-  .header_haut {
-    padding: 15px 20px 55px;
-  }
+
 
   .header_bas {
     padding: 15px 20px 75px;
@@ -168,7 +193,6 @@ h2{
   .bloc {
     max-width: 45%;
     padding: 12px 0 0 0;
-    font-size: 12px;
   }
 
   #image_mockup {
@@ -179,24 +203,20 @@ h2{
 
 @media only screen and (max-width: 576px) {
   /* PORTABLE */
-  body {
+  header {
     background-color: hsl(193, 100%, 96%);
     background-image: url("images/bg_hero_mobile.svg");
+    background-repeat: no-repeat;
   }
 
-  .header_haut {
-    padding: 8px 7px;
-  }
+.header_haut {
+margin-top: 20px;
+padding: 5px;
+}
 
-  .logo {
-    width: 35%;
-  }
-
-  .open-button {
-    padding: 4px 20px;
-    margin-top: 4px;
-    font-size: 10px;
-  }
+.open-button {
+  padding: 10px 30px 10px 30px;
+}
 
   .header_bas {
     flex-direction: column;
@@ -207,7 +227,6 @@ h2{
   .bloc {
     text-align: center;
     max-width: 84%;
-    font-size: 14px;
   }
 
   .button_2 {
